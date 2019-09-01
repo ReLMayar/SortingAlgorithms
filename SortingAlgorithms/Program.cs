@@ -48,6 +48,27 @@ namespace SortingAlgorithms
             }
             Console.WriteLine('\n');
             #endregion
+
+            #region InsertSort
+            Console.WriteLine("Insert Sort:");
+            var insert = new Algorithms.InsertSort<int>();
+
+            Console.WriteLine("Unsorted list:");
+            for (int i = 0; i < 10; i++)
+            {
+                insert.Items.Add(rnd.Next(0, 100));
+                Console.Write(insert.Items[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Result of sorting:");
+            insert.Sort();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(insert.Items[i] + " ");
+            }
+            Console.WriteLine('\n');
+            #endregion
         }
     }
 }
